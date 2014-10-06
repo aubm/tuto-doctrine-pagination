@@ -1,0 +1,4 @@
+ab_blog:
+    resource: "@ABBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,3 @@
+ab_blog_posts_index:
+    path:     /
+    defaults: { _controller: ABBlogBundle:Posts:index }

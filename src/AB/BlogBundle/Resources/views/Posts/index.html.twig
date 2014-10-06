@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <table>
+        <thead>
+        <tr>
+            <th>Post</th>
+            <th>Tags</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.title }}</td>
+                <td>
+                    {% for tag in post.tags %}
+                        {{ tag.name }}&nbsp;
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <tfooter>
+            <tr>
+                <td colspan="2">Total : {{ posts|length }}</td>
+            </tr>
+        </tfooter>
+    </table>
+{% endblock %}
